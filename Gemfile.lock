@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    geckoboard-ruby (0.4.0)
+    puma (3.11.0)
+    rack (1.6.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  geckoboard-ruby
+  puma
+  rack
+
+BUNDLED WITH
+   1.16.0
