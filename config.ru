@@ -15,7 +15,7 @@ run -> env do
   request = Rack::Request.new(env)
 
   case
-  when env['X-Auth-Token'] != WEBHOOK_AUTH_TOKEN
+  when env['HTTP_X_AUTH_TOKEN'] != WEBHOOK_AUTH_TOKEN
     [401, {}, ['Unauthorized']]
   when request.post?
     payload = JSON.parse(request.body.read)
