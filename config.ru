@@ -3,7 +3,7 @@ require 'geckoboard'
 GECKOBOARD_API_KEY = ENV.fetch('GECKOBOARD_API_KEY')
 WEBHOOK_AUTH_TOKEN = ENV.fetch('WEBHOOK_AUTH_TOKEN')
 
-dataset = Geckoboard.client(ENV.fetch('GECKOBOARD_API_KEY'))
+dataset = Geckoboard.client(GECKOBOARD_API_KEY)
   .datasets
   .find_or_create('guinea_pig_shed', fields: [
     Geckoboard::DateTimeField.new(:timestamp, name: 'Timestamp'),
